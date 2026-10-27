@@ -19,7 +19,7 @@ type Story = Map.Map NodeId Node
 story :: Story
 story = Map.fromList
     [("start", Node "You are flying your ship near the fourth sector of the andromeda galaxy. Suddenly the ships sensors pick up an emergency hail."
-        [Choice "Re-route to the hailing coordinates" "re-route",
+        [Choice "Re-route to the hailing coordinates." "re-route",
          Choice "Ignore the hail and fly on." "cowardEnding"]), 
          
      ("cowardEnding", Node "You silence the call and fly on into space like a coward. THE END."
@@ -28,7 +28,11 @@ story = Map.fromList
      ("re-route", Node "You enter the new coordinates into your ship's navigation and activate your FTL drive. Space bends around and your ship travels the lightways. \
      \You come out of the lightway and see a disabled ship floating in the orbit of Sigma-4, a lush green planet."
         [Choice "Fly to the ship in your docking craft and enter." "shipArrival",
-         Choice "Fly to the planet where the emergency hail is coming from." "planetArrival"])
+         Choice "Fly to the planet where the emergency hail is coming from." "planetArrival"]),
+
+     ("planetArrival", Node "You successfully land on the planet. The homing beacon is 5 clicks to the north. Do you take your speeder or walk?"
+        [Choice "Walk to the homing beacon." "walk",
+         Choice "Take the speeder." "speeder"])
         
         
     
