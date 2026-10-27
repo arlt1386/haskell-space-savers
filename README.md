@@ -1,6 +1,6 @@
 # haskell-space-savers
 
-Description: 
+**Description:** 
 
 This is the Haskell Space Savers project. It is a text-based adventure game written in Haskell. This will take you on a grand adventure through space. You will be at the helm of your own destiny.
 
@@ -10,6 +10,6 @@ Built with pure functional programming, because even the cosmos deserves clean, 
 
 
 
-How to Run the Game:
+**How to Run the Game:**
 
 Open up a terminal and go to where the Main.hs file is located. Type in "runghc Main.hs" and let the game begin. Enjoy the experience.
