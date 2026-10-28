@@ -6,9 +6,15 @@ import Text.Read (readMaybe)
 
 type NodeId = String 
  
-data Choice = Choice {choiceText :: String, choiceNext :: NodeId}
+data Choice = Choice 
+    {choiceText :: String
+    , choiceNext :: NodeId
+    }
 
-data Node = Node {nodeText :: String, nodeChoices :: [Choice]}
+data Node = Node 
+    {nodeText :: String
+    , nodeChoices :: [Choice]
+    }
 
 type Story = Map.Map NodeId Node
 
