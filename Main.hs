@@ -32,7 +32,12 @@ story = Map.fromList
 
      ("planetArrival", Node "You successfully land on the planet. The homing beacon is 5 clicks to the north. Do you take your speeder or walk?"
         [Choice "Walk to the homing beacon." "walk",
-         Choice "Take the speeder." "speeder"])
+         Choice "Take the speeder." "speeder"]),
+
+     ("walk", Node "You start walking toward the beacon. Lazgun hanging on your hip. As you walk on the path, you suddenly hear a rustle in the bushes."
+        [Choice "Continue walking." "walkingPastBush",
+         Choice "Shoot into the bush." "shootBush",
+         Choice "Shoot yourself." "shootSelf"])
         
         
     
