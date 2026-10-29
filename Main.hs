@@ -43,6 +43,12 @@ story = Map.fromList
      ("walk", Node "You start walking toward the beacon. Lazgun hanging on your hip. As you walk on the path, you suddenly hear a rustle in the bushes."
         [Choice "Continue walking." "walkingPastBush",
          Choice "Shoot into the bush." "shootBush",
+         Choice "Shoot yourself." "shootSelf"]),
+
+    ("speeder", Node "You ride your speeder toward the beacon. You arrive quickly and find a group of survivors huddled in a ditch. They tell you to watch out for the \
+    \monster in the woods. You hear a noise behind you. As you turn around you see a hideous monster."
+        [Choice "Shoot the monster." "shootMonster",
+         Choice "Jump into ditch and then fire on the monster with the survivors." "jumpDitch",
          Choice "Shoot yourself." "shootSelf"])
         
         
