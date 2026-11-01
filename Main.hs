@@ -67,7 +67,7 @@ showNode node = do
     mapM_ showChoice (zip [1..] (nodeChoices node))
 
 showChoice :: [Choice] -> IO NodeId
-showChoice (i, c) = putStrLn (show i += ") " ++ choiceText c)
+showChoice (i, c) = putStrLn (show i ++ ") " ++ choiceText c)
 
 askChoice :: [Choice] -> IO NodeId
 askChoice choices = do
@@ -78,10 +78,18 @@ askChoice choices = do
             return (choiceNext (choices !! (n - 1)))
         _ -> do
             putStrLn "Please enter a number from the list."
-            askCHoice choices
+            askChoice choices
 
 play :: Story -> NodeId -> IO ()
-
+play s nid = case Map.lookup nid s of
+    Nothing -> putStrLn ("[Story error: missing node \"" ++ nid ++ "\"]")
+    Just node -> do
+        showNode node
+        if null (nodeChoices node)
+            then putStrLn "Thanks for playing!"
+        else do
+            next <- askChoice (nodeChoices node)
+            play s next
 
 
 
