@@ -14,8 +14,10 @@ Built with pure functional programming, because even the cosmos deserves clean, 
 
 Option 1:
 
-Open up a terminal and go to where the Main.hs file is located. Type in "runghc Main.hs" and let the game begin. Enjoy the experience.
+Use ghci, load the main file and run it. Enjoyment of the exerience is required.
+
 
 Option 2:
 
-Use ghci, load the main file and run it. Enjoyment of the exerience is required.
+Open up a terminal and go to where the Main.hs file is located. Type in "runghc Main.hs" and let the game begin. Enjoy the experience.
+
