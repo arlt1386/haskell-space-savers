@@ -66,7 +66,9 @@ story = Map.fromList
 
 
 
+
 main :: IO ()
 main = do
     hSetBuffering stdout NoBuffering
     putStrLn "Haskell Space Savers!"
+    play story "start"
