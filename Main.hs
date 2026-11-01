@@ -104,17 +104,13 @@ story = Map.fromList
          Choice "Refuse politely and continue on your own." "continueSolo"]),
 
     ("followSurvivors" Node "After you arrive at the planet, the commander reveals to you that they are actually the emperor of this planet. They bring you to the palentine hill and a triumph is held in \
-    \your honor. You are then showered with land and riches. You will never have to want for anything again. CONGRADULATIONS! THE END.")
+    \your honor. You are then showered with land and riches. You will never have to want for anything again. CONGRADULATIONS! THE END."
+        [])
 
     ]
 
-    
-        
-        
-
 
 -- Here is the engine that will run the story we make. It is how we show each node contents and the option of which node to go to next.
-
 showNode :: Node -> IO ()
 showNode node = do
     putStrLn ""
@@ -146,7 +142,6 @@ play s nid = case Map.lookup nid s of
         else do
             next <- askChoice (nodeChoices node)
             play s next
-
 
 main :: IO ()
 main = do
