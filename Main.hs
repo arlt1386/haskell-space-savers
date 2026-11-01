@@ -31,6 +31,10 @@ story = Map.fromList
      ("cowardEnding", Node "You silence the call and fly on into space like a coward. THE END."
         []),
 
+    --Section for Ship Arrival story:
+    
+
+    --Section for Planet Arrival story:
      ("re-route", Node "You enter the new coordinates into your ship's navigation and activate your FTL drive. Space bends around and your ship travels the lightways. \
      \You come out of the lightway and see a disabled ship floating in the orbit of Sigma-4, a lush green planet."
         [Choice "Fly to the ship in your docking craft and enter." "shipArrival",
@@ -45,19 +49,49 @@ story = Map.fromList
          Choice "Shoot into the bush." "shootBush",
          Choice "Shoot yourself." "shootSelf"]),
 
+    ("walkingPastBush", Node "As you continue walking, the rustling gets louder. As you take one last glace, the last thing you see is the fangs of a Shadow Tiger as it \
+    \clamps its jaws around your throat. THE END."
+        []),
+
+    ("shootBush", Node "As you fire into the rustling bush, you hear the terrrible scream of a Shadow Tiger. You realize you were mere moements away from death."
+        [Choice "Continue..." "groupArrival"]),
+
     ("speeder", Node "You ride your speeder toward the beacon. You arrive quickly and find a group of survivors huddled in a ditch. They tell you to watch out for the \
-    \monster in the woods. You hear a noise behind you. As you turn around you see a hideous monster."
+    \monster in the woods. You hear a noise behind you. As you turn around you see a hideous monster with a large number of grotesque eyes."
         [Choice "Shoot the monster." "shootMonster",
          Choice "Jump into ditch and then fire on the monster with the survivors." "jumpDitch",
-         Choice "Shoot yourself." "shootSelf"])
-        
-        
-    
-    
+         Choice "Shoot yourself." "shootSelf"]),
+
+    ("shootMonster" Node "You fire your lazgun at the monster. Hitting one of its grotesque eyes. It sends out a psychic beam as it roars. You and the survivors are all \
+    \stunned. It now starts to charge."
+        [Choice "Roll out of the way and continue shooting." "rollShoot",
+         Choice "Throw flame bomb at the monsters eyes." "flameBomb"]),
+
+    ("jumpDitch" Node "You jump into the ditch and fire at the mosnter along with the survivors. The monster is overwhelmed by the sheer number of attackers. It sends out a \
+    \psychic shreek that stuns all of you. It then starts to charge."
+        [Choice "Roll out of the way and continue shooting." "rollShoot",
+         Choice "Throw flame bomb at the monsters eyes." "flameBomb"]),
+
+    ("shootSelf", Node "You draw the lasgun from your hip. The barrel is cold against your chest, and for one long heartbeat you feel it pulse against the muzzle. \
+    \You squeeze the trigger. White fire floods your chest, and then the pain thins and fades. A terrible stillness settles over you, and the din of the battlefield \
+    \drains away like a tide going out. THE END."
+        []),
+
+    ("groupArrival" Node "You arrive to the location of the beacon and find a group of survivors huddled in a ditch. They tell you to watch out for the \
+    \monster in the woods. You hear a noise behind you. As you turn around you see a hideous monster with a large number of grotesque eyes."
+        [Choice "Shoot the monster." "shootMonster",
+         Choice "Jump into ditch and then fire on the monster with the survivors." "jumpDitch"]),
+
+    ("rollShoot" )
+
     ]
 
+    
+        
+        
 
--- Down here is where the "engine" of the game will go. Some way to display a node, ask player for input choice, and loop through the nodes. IDK this either.
+
+
 
 showNode :: Node -> IO ()
 showNode node = do
