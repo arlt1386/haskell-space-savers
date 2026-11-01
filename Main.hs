@@ -74,8 +74,13 @@ askChoice choices = do
     putStr "> "
     input <- getLine
     case readMaybe input of
-        
+        Just n | n >= 1 && n <= length choices ->
+            return (choiceNext (choices !! (n - 1)))
+        _ -> do
+            putStrLn "Please enter a number from the list."
+            askCHoice choices
 
+play :: Story -> NodeId -> IO ()
 
 
 
