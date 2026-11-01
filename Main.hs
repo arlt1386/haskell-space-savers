@@ -59,7 +59,22 @@ story = Map.fromList
 
 -- Down here is where the "engine" of the game will go. Some way to display a node, ask player for input choice, and loop through the nodes. IDK this either.
 
+showNode :: Node -> IO ()
+showNode node = do
+    putStrLn ""
+    putStrLn (nodeText node)
+    putStrLn ""
+    mapM_ showChoice (zip [1..] (nodeChoices node))
 
+showChoice :: [Choice] -> IO NodeId
+showChoice (i, c) = putStrLn (show i += ") " ++ choiceText c)
+
+askChoice :: [Choice] -> IO NodeId
+askChoice choices = do
+    putStr "> "
+    input <- getLine
+    case readMaybe input of
+        
 
 
 
