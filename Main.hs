@@ -31,8 +31,8 @@ story = Map.fromList
      ("cowardEnding", Node "You silence the call and fly on into space like a coward. THE END."
         []),
 
-    --Section for Ship Arrival story:
-    
+    --Section for Ship Arrival story (it will go into the planetArrival node when you leave the ship.):
+
 
     --Section for Planet Arrival story:
      ("re-route", Node "You enter the new coordinates into your ship's navigation and activate your FTL drive. Space bends around and your ship travels the lightways. \
@@ -82,7 +82,17 @@ story = Map.fromList
         [Choice "Shoot the monster." "shootMonster",
          Choice "Jump into ditch and then fire on the monster with the survivors." "jumpDitch"]),
 
-    ("rollShoot" )
+    ("rollShoot" "You roll out of the charging monstors path. You, along with the survivors continue shooting at the monster. The multiple incomming attacks daze and \
+    \confuse the monster. As you all fire your last rounds into the monster, it falls with a dying whimper. You all cheer and the commander of the survivors comes towards you \
+    \to thank you for your help. He then asks if you are able to take them back to their ship."
+        [Choice "Rob the survivors." "robSurvivors",
+         Choice "Agree to help the survivors back to their ship." "helpSurvivors"]),
+
+    ("flameBomb" "As you ignite the hard metal tube, you aim and throw it at the monster. The bomb erupts into a large ball of fire, it coats the monster in sticky napalm. \
+    \The scream of the monster is ear piercing. you all take the oportunity to fire and as the monster dies, it is over quickly. You all cheer and the survivors come to thank \
+    \you for the help. The commander comes to you and ask for your help returning to their ship."
+        [Choice "Rob the survivors." "robSurvivors",
+         Choice "Agree to help the survivors back to their ship." "helpSurvivors"]),
 
     ]
 
