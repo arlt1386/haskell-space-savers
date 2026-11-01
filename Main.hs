@@ -113,7 +113,7 @@ story = Map.fromList
         
 
 
--- Here is the engine that will run the story we make. It is how we shows each node contents and the option of which node to go to next.
+-- Here is the engine that will run the story we make. It is how we show each node contents and the option of which node to go to next.
 
 showNode :: Node -> IO ()
 showNode node = do
