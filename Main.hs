@@ -62,12 +62,12 @@ story = Map.fromList
          Choice "Jump into ditch and then fire on the monster with the survivors." "jumpDitch",
          Choice "Shoot yourself." "shootSelf"]),
 
-    ("shootMonster" Node "You fire your lazgun at the monster. Hitting one of its grotesque eyes. It sends out a psychic beam as it roars. You and the survivors are all \
+    ("shootMonster", Node "You fire your lazgun at the monster. Hitting one of its grotesque eyes. It sends out a psychic beam as it roars. You and the survivors are all \
     \stunned. It now starts to charge."
         [Choice "Roll out of the way and continue shooting." "rollShoot",
          Choice "Throw flame bomb at the monsters eyes." "flameBomb"]),
 
-    ("jumpDitch" Node "You jump into the ditch and fire at the mosnter along with the survivors. The monster is overwhelmed by the sheer number of attackers. It sends out a \
+    ("jumpDitch", Node "You jump into the ditch and fire at the mosnter along with the survivors. The monster is overwhelmed by the sheer number of attackers. It sends out a \
     \psychic shreek that stuns all of you. It then starts to charge."
         [Choice "Roll out of the way and continue shooting." "rollShoot",
          Choice "Throw flame bomb at the monsters eyes." "flameBomb"]),
@@ -77,33 +77,33 @@ story = Map.fromList
     \drains away like a tide going out. THE END."
         []),
 
-    ("groupArrival" Node "You arrive to the location of the beacon and find a group of survivors huddled in a ditch. They tell you to watch out for the \
+    ("groupArrival", Node "You arrive to the location of the beacon and find a group of survivors huddled in a ditch. They tell you to watch out for the \
     \monster in the woods. You hear a noise behind you. As you turn around you see a hideous monster with a large number of grotesque eyes."
         [Choice "Shoot the monster." "shootMonster",
          Choice "Jump into ditch and then fire on the monster with the survivors." "jumpDitch"]),
 
-    ("rollShoot" "You roll out of the charging monstors path. You, along with the survivors continue shooting at the monster. The multiple incomming attacks daze and \
+    ("rollShoot", Node "You roll out of the charging monstors path. You, along with the survivors continue shooting at the monster. The multiple incomming attacks daze and \
     \confuse the monster. As you all fire your last rounds into the monster, it falls with a dying whimper. You all cheer and the commander of the survivors comes towards you \
     \to thank you for your help. He then asks if you are able to take them back to their ship."
         [Choice "Rob the survivors." "robSurvivors",
          Choice "Agree to help the survivors back to their ship." "helpSurvivors"]),
 
-    ("flameBomb" "As you ignite the hard metal tube, you aim and throw it at the monster. The bomb erupts into a large ball of fire, it coats the monster in sticky napalm. \
+    ("flameBomb", Node "As you ignite the hard metal tube, you aim and throw it at the monster. The bomb erupts into a large ball of fire, it coats the monster in sticky napalm. \
     \The scream of the monster is ear piercing. you all take the oportunity to fire and as the monster dies, it is over quickly. You all cheer and the survivors come to thank \
     \you for the help. The commander comes to you and ask for your help returning to their ship."
         [Choice "Rob the survivors." "robSurvivors",
          Choice "Agree to help the survivors back to their ship." "helpSurvivors"]),
 
-    ("robSurvivors" Node "As you aim your weapon at the survivors at the commander and demand their loot, you hear a click behind you before you feel a searing pain in your back. \
+    ("robSurvivors", Node "As you aim your weapon at the survivors at the commander and demand their loot, you hear a click behind you before you feel a searing pain in your back. \
     \The blast hit you in the spine and as you bleed out on the ground, the commander looks down at you in disappointment. \"There is a sufficiency in the world for man's need but not for man's greed.\" THE END."
         []),
 
-    ("helpSurvivors" Node "You lead the survivors back to your ship and fly them back to their ship. You help them make the needed repairs to their ship. A few days later, their galactic cruiser is back \
+    ("helpSurvivors", Node "You lead the survivors back to your ship and fly them back to their ship. You help them make the needed repairs to their ship. A few days later, their galactic cruiser is back \
     \up and running. The commander offers you to come with them back to their planet."
         [Choice "Agree to follow them to their planet." "followSurvivors",
          Choice "Refuse politely and continue on your own." "continueSolo"]),
 
-    ("followSurvivors" Node "After you arrive at the planet, the commander reveals to you that they are actually the emperor of this planet. They bring you to the palentine hill and a triumph is held in \
+    ("followSurvivors", Node "After you arrive at the planet, the commander reveals to you that they are actually the emperor of this planet. They bring you to the palentine hill and a triumph is held in \
     \your honor. You are then showered with land and riches. You will never have to want for anything again. CONGRADULATIONS! THE END."
         [])
 
