@@ -94,6 +94,18 @@ story = Map.fromList
         [Choice "Rob the survivors." "robSurvivors",
          Choice "Agree to help the survivors back to their ship." "helpSurvivors"]),
 
+    ("robSurvivors" Node "As you aim your weapon at the survivors at the commander and demand their loot, you hear a click behind you before you feel a searing pain in your back. \
+    \The blast hit you in the spine and as you bleed out on the ground, the commander looks down at you in disappointment. \"There is a sufficiency in the world for man's need but not for man's greed.\" THE END."
+        []),
+
+    ("helpSurvivors" Node "You lead the survivors back to your ship and fly them back to their ship. You help them make the needed repairs to their ship. A few days later, their galactic cruiser is back \
+    \up and running. The commander offers you to come with them back to their planet."
+        [Choice "Agree to follow them to their planet." "followSurvivors",
+         Choice "Refuse politely and continue on your own." "continueSolo"]),
+
+    ("followSurvivors" Node "After you arrive at the planet, the commander reveals to you that they are actually the emperor of this planet. They bring you to the palentine hill and a triumph is held in \
+    \your honor. You are then showered with land and riches. You will never have to want for anything again. CONGRADULATIONS! THE END.")
+
     ]
 
     
@@ -101,7 +113,7 @@ story = Map.fromList
         
 
 
-
+-- Here is the engine that will run the story we make. It is how we shows each node contents and the option of which node to go to next.
 
 showNode :: Node -> IO ()
 showNode node = do
