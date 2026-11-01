@@ -66,7 +66,7 @@ showNode node = do
     putStrLn ""
     mapM_ showChoice (zip [1..] (nodeChoices node))
 
-showChoice :: [Choice] -> IO NodeId
+showChoice :: (Int, Choice) -> IO ()
 showChoice (i, c) = putStrLn (show i ++ ") " ++ choiceText c)
 
 askChoice :: [Choice] -> IO NodeId
@@ -90,9 +90,6 @@ play s nid = case Map.lookup nid s of
         else do
             next <- askChoice (nodeChoices node)
             play s next
-
-
-
 
 
 main :: IO ()
