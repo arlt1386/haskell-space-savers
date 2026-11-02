@@ -54,7 +54,7 @@ story = Map.fromList
       []),
       
     ("engine", Node "You're familiar with this make of ship so you know where the engine controls are located. You jump over the paralyzed alien \
-    body and hang a left into a room full of blinking lights and a burnt hair smell. All of the control panels are fried, it's no use to try to fix it."
+    \ body and hang a left into a room full of blinking lights and a burnt hair smell. All of the control panels are fried, it's no use to try to fix it."
       [Choice "I want to keep looking to see if I can find anything" "shipMonster2",
        Choice "Nothing here is of use to me." "leaveShip"]),
 
