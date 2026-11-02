@@ -1,3 +1,7 @@
+-- Haskell Text Based Adventure Game
+-- Authors: Susanna Arlt, Rohan Hari
+-- Date Modified: 11/02/2026
+
 module Main where
 
 import qualified Data.Map as Map
@@ -29,7 +33,6 @@ story = Map.fromList
          
      ("cowardEnding", Node "You silence the call and fly on into space like a coward. THE END."
         []),
-
 
     ("re-route", Node "You enter the new coordinates into your ship's navigation and activate your FTL drive. Space bends around and your ship travels the lightways. \
      \You come out of the lightway and see a disabled ship floating in the orbit of Sigma-4, a lush green planet."
@@ -63,7 +66,6 @@ story = Map.fromList
       [Choice "Pick up the pace!" "planetArrival",
        Choice "Let's take our time..." "planetArrival"]),
 
-    
     --Section for Planet Arrival story:
     ("planetArrival", Node "You successfully land on the planet. The homing beacon is 5 clicks to the north. Do you take your speeder or walk?"
         [Choice "Walk to the homing beacon." "walk",
@@ -131,7 +133,6 @@ story = Map.fromList
     ("followSurvivors", Node "After you arrive at the planet, the commander reveals to you that they are actually the emperor of this planet. They bring you to the palentine hill and a triumph is held in \
     \your honor. You are then showered with land and riches. You will never have to want for anything again. CONGRADULATIONS! THE END."
         [])
-
     ]
 
 
