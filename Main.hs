@@ -37,9 +37,33 @@ story = Map.fromList
          Choice "Fly to the planet where the emergency hail is coming from." "planetArrival"]),
 
     --Section for Ship Arrival story (it will go into the planetArrival node when you leave the ship.):
-    ("shipArrival", Node "You fly your docking craft to the open port on the ship. You successfully enter the ship. "
-        []),
+    ("shipArrival", Node "You fly your docking craft to the open port on the ship. You successfully enter the ship. It looks empty but you feel like you're being watched."
+        [Choice "Explore the dark ship" "explore",
+         Choice "Too spooky, call it quits." "leaveShip"]),
 
+    ("explore", Node "You cautiously walk down the dark entrance, when suddenly, a zombified survivor falls off of the ceiling!"
+       [Choice "Eek! I can't do this anymore!" "leaveShip",
+        Choice "Nothing I can't handle: shoot alien before it hits the ground" "shipMonster"]),
+
+    ("shipMonster", Node "You bravely and calmly shot the alien, this doesn't phase you; You do this on the regular. Now, what are you here for?"
+       [Choice "I want to look around to see if I can find anything valuble." "shipMonster2",
+        Choice "I want to try to recover the ship, let's check the controls" "engine"]),
+     
+    ("shipMonster2", Node "You take a right turn down a long corridor that seems like it would be too big for the ship, and before \
+    \you could think about it, a mangled alien-leopard jumps into you and feasts upon you. THE END"
+      []),
+      
+    ("engine", Node "You're familiar with this make of ship so you know where the engine controls are located. You jump over the paralyzed alien \
+    body and hang a left into a room full of blinking lights and a burnt hair smell. All of the control panels are fried, it's no use to try to fix it."
+      [Choice "I want to keep looking to see if I can find anything" "shipMonster2",
+       Choice "Nothing here is of use to me." "leaveShip"]),
+
+    ("leaveShip", Node "You quickly leave this mess of a ship and take off in your own, careful as to not even look behind you. You think to yourself, \
+    \ 'Something about that place feels off.' You get back on the path to arrive at the planet with emergency hail"
+      [Choice "Pick up the pace!" "planetArrival",
+       Choice "Let's take our time..." "planetArrival"]),
+
+    
     --Section for Planet Arrival story:
     ("planetArrival", Node "You successfully land on the planet. The homing beacon is 5 clicks to the north. Do you take your speeder or walk?"
         [Choice "Walk to the homing beacon." "walk",
